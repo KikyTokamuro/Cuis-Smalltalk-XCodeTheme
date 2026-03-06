@@ -7,7 +7,9 @@ Themes inspired by Apple's Xcode IDE for Cuis Smalltalk
 
 ## Themes
 - XCodeThemeLight
+  - XCodeThemeLightRounded
 - XCodeThemeDark
+  - XCodeThemeDarkRounded
 
 ## Installation
 - Drag and drop `XCodeTheme.pck.st` file into Cuis

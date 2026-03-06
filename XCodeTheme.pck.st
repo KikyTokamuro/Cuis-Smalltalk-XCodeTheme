@@ -1,6 +1,6 @@
-'From Cuis7.7 [latest update: #7839] on 22 February 2026 at 11:13:04 am'!
+'From Cuis7.6 [latest update: #7777] on 6 March 2026 at 11:57:13 am'!
 'Description Themes inspired by Apple''s Xcode IDE'!
-!provides: 'XCodeTheme' 1 2!
+!provides: 'XCodeTheme' 1 3!
 SystemOrganization addCategory: #XCodeTheme!
 
 
@@ -14,6 +14,16 @@ Theme subclass: #XCodeThemeDark
 XCodeThemeDark class
 	instanceVariableNames: ''!
 
+!classDefinition: #XCodeThemeDarkRounded category: #XCodeTheme!
+XCodeThemeDark subclass: #XCodeThemeDarkRounded
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'XCodeTheme'!
+!classDefinition: 'XCodeThemeDarkRounded class' category: #XCodeTheme!
+XCodeThemeDarkRounded class
+	instanceVariableNames: ''!
+
 !classDefinition: #XCodeThemeLight category: #XCodeTheme!
 Theme subclass: #XCodeThemeLight
 	instanceVariableNames: ''
@@ -24,12 +34,28 @@ Theme subclass: #XCodeThemeLight
 XCodeThemeLight class
 	instanceVariableNames: ''!
 
+!classDefinition: #XCodeThemeLightRounded category: #XCodeTheme!
+XCodeThemeLight subclass: #XCodeThemeLightRounded
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'XCodeTheme'!
+!classDefinition: 'XCodeThemeLightRounded class' category: #XCodeTheme!
+XCodeThemeLightRounded class
+	instanceVariableNames: ''!
+
 
 !XCodeThemeDark commentStamp: '<historical>' prior: 0!
 A dark theme inspired by Apple XCode IDE.!
 
+!XCodeThemeDarkRounded commentStamp: '<historical>' prior: 0!
+A dark rounded theme inspired by Apple XCode IDE.!
+
 !XCodeThemeLight commentStamp: '<historical>' prior: 0!
 A light theme inspired by Apple XCode IDE.!
+
+!XCodeThemeLightRounded commentStamp: '<historical>' prior: 0!
+A light rounded theme inspired by Apple XCode IDE.!
 
 !XCodeThemeDark methodsFor: 'colors' stamp: 'Arkhangelsky D.S. 21/Feb/2026 22:37:57'!
 background
@@ -150,28 +176,28 @@ shout
 	^ {
 		"Default text - light gray"
 		#defaults -> '#D4D4D4'.
-		
+
 		"Undefined/invalid - red"
 		#undefined -> '#FF7B72'.
-		
+
 		"Method tags/pragmas - purple"
 		#methodTags -> '#C586C0'.
-		
+
 		"Pseudo variables (self, super, nil, true, false) - pink/red"
 		#pseudoVariables -> '#FF7B72'.
-		
+
 		"Messages/method calls - yellow"
 		#messages -> '#DCDCAA'.
-		
+
 		"Arguments/parameters - light blue"
 		#arguments -> '#9CDCFE'.
-		
+
 		"Instance variables - light blue"
 		#instVar -> '#9CDCFE'.
-		
+
 		"Incomplete/unimplemented messages - gray"
 		#incompleteMessages -> '#808080'.
-		
+
 		"Block nesting levels - various colors"
 		#blockLevelZero -> '#4EC9B0'.
 		#blockLevelOne -> '#C586C0'.
@@ -181,59 +207,69 @@ shout
 		#blockLevelFive -> '#C586C0'.
 		#blockLevelSix -> '#FF7B72'.
 		#blockLevelSeven -> '#DCDCAA'.
-		
+
 		"Temp bar and variables - gray/blue"
 		#tempBar -> '#666666'.
 		#tempVars -> '#9CDCFE'.
-		
+
 		"Class variables - cyan"
 		#classVar -> '#4EC9B0'.
-		
+
 		"Global variables - yellow"
 		#globalVar -> '#DCDCAA'.
-		
+
 		"Comments - green"
 		#comment -> '#6A9955'.
-		
+
 		"Strings - orange/salmon"
 		#string -> '#CE9178'.
-		
+
 		"Symbols - cyan"
 		#symbol -> '#4EC9B0'.
-		
+
 		"Numbers - light green"
 		#number -> '#B5CEA8'.
-		
+
 		"Character constants - orange"
 		#character -> '#CE9178'.
-		
+
 		"Selectors - yellow"
 		#selector -> '#DCDCAA'.
-		
+
 		"Return operator - pink"
 		#return -> '#FF7B72'.
-		
+
 		"Assignment operator - white"
 		#assignment -> '#FFFFFF'.
 
 		"Block brackets - yellow"
 		#blockStart -> '#DCDCAA'.
 		#blockEnd -> '#DCDCAA'.
-		
+
 		"Array parentheses - white"
 		#arrayStart -> '#FFFFFF'.
 		#arrayEnd -> '#FFFFFF'.
-		
+
 		"Left and right parentheses - white"
 		#leftParenthesis -> '#FFFFFF'.
 		#rightParenthesis -> '#FFFFFF'.
-		
+
 		"Statement separators"
 		#statementSeparator -> '#FFFFFF'.
-		
+
 		"Literals"
 		#literals -> '#B5CEA8'.
 	}! !
+
+!XCodeThemeDarkRounded methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 6/Mar/2026 11:52:37'!
+roundButtons
+	"Rounded buttons"
+	^ true! !
+
+!XCodeThemeDarkRounded methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 6/Mar/2026 11:52:48'!
+roundWindowCorners
+	"Rounded window corners"
+	^ true! !
 
 !XCodeThemeLight methodsFor: 'menu colors' stamp: 'Arkhangelsky D.S. 22/Feb/2026 10:57:48'!
 menu
@@ -260,28 +296,28 @@ shout
 	^ {
 		"Default text - dark gray/black"
 		#defaults -> '#000000'.
-		
+
 		"Undefined/invalid - dark red"
 		#undefined -> '#CD3131'.
-		
+
 		"Method tags/pragmas - purple"
 		#methodTags -> '#AF00DB'.
-		
+
 		"Pseudo variables (self, super, nil, true, false) - dark pink/red"
 		#pseudoVariables -> '#CD3131'.
-		
+
 		"Messages/method calls - dark yellow/brown"
 		#messages -> '#795E26'.
-		
+
 		"Arguments/parameters - dark blue"
 		#arguments -> '#001080'.
-		
+
 		"Instance variables - dark blue"
 		#instVar -> '#001080'.
-		
+
 		"Incomplete/unimplemented messages - gray"
 		#incompleteMessages -> '#808080'.
-		
+
 		"Block nesting levels - various dark colors"
 		#blockLevelZero -> '#267F99'.
 		#blockLevelOne -> '#AF00DB'.
@@ -291,56 +327,56 @@ shout
 		#blockLevelFive -> '#AF00DB'.
 		#blockLevelSix -> '#CD3131'.
 		#blockLevelSeven -> '#795E26'.
-		
+
 		"Temp bar and variables - gray/blue"
 		#tempBar -> '#808080'.
 		#tempVars -> '#001080'.
-		
+
 		"Class variables - teal"
 		#classVar -> '#267F99'.
-		
+
 		"Global variables - dark yellow"
 		#globalVar -> '#795E26'.
-		
+
 		"Comments - dark green"
 		#comment -> '#008000'.
-		
+
 		"Strings - dark orange/brown"
 		#string -> '#A31515'.
-		
+
 		"Symbols - teal"
 		#symbol -> '#267F99'.
-		
+
 		"Numbers - dark green"
 		#number -> '#098658'.
-		
+
 		"Character constants - dark orange"
 		#character -> '#A31515'.
-		
+
 		"Selectors - dark yellow"
 		#selector -> '#795E26'.
-		
+
 		"Return operator (^) - dark red"
 		#return -> '#CD3131'.
-		
+
 		"Assignment operator - black"
 		#assignment -> '#000000'.
 
 		"Block brackets - dark yellow"
 		#blockStart -> '#795E26'.
 		#blockEnd -> '#795E26'.
-		
+
 		"Array parentheses - black"
 		#arrayStart -> '#000000'.
 		#arrayEnd -> '#000000'.
-		
+
 		"Left and right parentheses - black"
 		#leftParenthesis -> '#000000'.
 		#rightParenthesis -> '#000000'.
-		
+
 		"Statement separators"
 		#statementSeparator -> '#000000'.
-		
+
 		"Literals - dark green"
 		#literals -> '#098658'.
 	}! !
@@ -438,3 +474,13 @@ unfocusedTextHighlightFrom: aColor
 windowLabel
 	"Window title text - dark"
 	^ Color r: 0.1 g: 0.1 b: 0.1! !
+
+!XCodeThemeLightRounded methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 6/Mar/2026 11:49:28'!
+roundButtons
+	"Rounded buttons"
+	^ true! !
+
+!XCodeThemeLightRounded methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 6/Mar/2026 11:49:57'!
+roundWindowCorners
+	"Rounded window corners"
+	^ true! !
