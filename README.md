@@ -1,3 +1,5 @@
+<img src="./img/logo.png" width="250">
+
 # Cuis-Smalltalk-XCodeTheme
 
 Themes inspired by Apple's Xcode IDE for Cuis Smalltalk
