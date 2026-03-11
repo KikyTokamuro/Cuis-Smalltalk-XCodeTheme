@@ -1,6 +1,6 @@
-'From Cuis7.6 [latest update: #7777] on 6 March 2026 at 11:57:13 am'!
+'From Cuis7.6 [latest update: #7777] on 11 March 2026 at 1:32:14 pm'!
 'Description Themes inspired by Apple''s Xcode IDE'!
-!provides: 'XCodeTheme' 1 3!
+!provides: 'XCodeTheme' 1 4!
 SystemOrganization addCategory: #XCodeTheme!
 
 
@@ -142,6 +142,11 @@ embossedTitles
 	"Flat titles"
 	^ true! !
 
+!XCodeThemeDark methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 11/Mar/2026 13:13:16'!
+fullScreenDeskMargin
+	"Windows margin in fullscreen"
+	^ 0! !
+
 !XCodeThemeDark methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 21/Feb/2026 14:57:42'!
 roundButtons
 	"Flat buttons"
@@ -165,6 +170,11 @@ useUniformColors
 useWindowTitleGradient
 	"Flat window titles"
 	^ false! !
+
+!XCodeThemeDark methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 11/Mar/2026 13:17:32'!
+windowBorderWidth
+	"Windows border size"
+	^ 3! !
 
 !XCodeThemeDark methodsFor: 'initialization' stamp: 'Arkhangelsky D.S. 21/Feb/2026 21:53:04'!
 initialize
@@ -270,6 +280,16 @@ roundButtons
 roundWindowCorners
 	"Rounded window corners"
 	^ true! !
+
+!XCodeThemeDarkRounded methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 11/Mar/2026 13:15:11'!
+roundedButtonRadius
+	"Buttons radius"
+	^ 3! !
+
+!XCodeThemeDarkRounded methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 11/Mar/2026 13:16:01'!
+roundedWindowRadius
+	"Windows radius"
+	^ 6! !
 
 !XCodeThemeLight methodsFor: 'menu colors' stamp: 'Arkhangelsky D.S. 22/Feb/2026 10:57:48'!
 menu
@@ -391,6 +411,11 @@ embossedTitles
 	"Flat titles"
 	^ false! !
 
+!XCodeThemeLight methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 11/Mar/2026 13:13:28'!
+fullScreenDeskMargin
+	"Windows margin in fullscreen"
+	^ 0! !
+
 !XCodeThemeLight methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 22/Feb/2026 10:58:48'!
 roundButtons
 	"Flat buttons"
@@ -414,6 +439,11 @@ useUniformColors
 useWindowTitleGradient
 	"Flat window titles"
 	^ false! !
+
+!XCodeThemeLight methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 11/Mar/2026 13:17:08'!
+windowBorderWidth
+	"Windows border size"
+	^ 3! !
 
 !XCodeThemeLight methodsFor: 'widget colors' stamp: 'Arkhangelsky D.S. 22/Feb/2026 10:58:22'!
 listSelectedRowText
@@ -484,3 +514,13 @@ roundButtons
 roundWindowCorners
 	"Rounded window corners"
 	^ true! !
+
+!XCodeThemeLightRounded methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 11/Mar/2026 13:15:00'!
+roundedButtonRadius
+	"Buttons radius"
+	^ 3! !
+
+!XCodeThemeLightRounded methodsFor: 'other options' stamp: 'Arkhangelsky D.S. 11/Mar/2026 13:15:40'!
+roundedWindowRadius
+	"Windows radius"
+	^ 6! !
